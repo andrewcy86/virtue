@@ -28,7 +28,7 @@ function virtue_fav_output(){
 	if(empty($site_icon_id)) {
 	  	global $virtue;
 	  	if(isset($virtue['virtue_custom_favicon']['url']) && !empty($virtue['virtue_custom_favicon']['url']) ) {
-	    	echo '<link rel="shortcut icon" type="image/x-icon" href="'. esc_url($virtue['virtue_custom_favicon']['url']).'" />';
+	    	echo '<link rel="shortcut icon" href="https://www.epa.gov/sites/all/themes/epa/favicon.ico" type="image/vnd.microsoft.icon" />';
 	  	}
 	}
 }
