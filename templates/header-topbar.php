@@ -34,7 +34,7 @@
 			</div>
 			<div class="block block-pane block-pane-epa-web-area-connect" id="block-pane-epa-web-area-connect">
 				<ul class="menu utility-menu">
-					<li class="menu-item"><a class="menu-link" href="{CONTACT URL}">Contact Us</a></li>
+					<li class="menu-item"><a class="menu-link" href="/contact-us">Contact Us</a></li>
 				</ul>
 			</div>
 		</div>
