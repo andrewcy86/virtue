@@ -245,7 +245,9 @@ if ( ! class_exists( 'Redux' ) ) {
             'default'=> array(
                 'font-family'=>'Lato',
                 'color'=>"#444444", 
-                'font-style'=>'400',),
+                'font-style'=>'400',
+                'font-size'=>'14px', 
+                'line-height'=>'20px', ),
             ),
         array(
             'id'=>'logo_padding_top',
@@ -2003,4 +2005,3 @@ function virtue_remove_demo() {
             remove_action( 'admin_notices', array( ReduxFrameworkPlugin::instance(), 'admin_notices' ) );
         }
     }
-
