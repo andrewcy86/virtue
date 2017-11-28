@@ -8,6 +8,7 @@ function virtue_is_wc_version_gte_2_3() {return virtue_get_wc_version() && versi
 
 function kadence_scripts() {
   global $virtue;
+  wp_enqueue_style('kadence_theme', get_template_directory_uri() . '/assets/css/epa_style.min.css', false, "306");
   wp_enqueue_style('kadence_theme', get_template_directory_uri() . '/assets/css/virtue.css', false, "306");
  if(isset($virtue['skin_stylesheet']) || !empty($virtue['skin_stylesheet'])) {$skin = $virtue['skin_stylesheet'];} else { $skin = 'default.css';} 
  wp_enqueue_style('virtue_skin', get_template_directory_uri() . '/assets/css/skins/'.$skin.'', false, null);
