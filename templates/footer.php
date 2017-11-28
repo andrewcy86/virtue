@@ -1,6 +1,3 @@
-       </div>
-        </div>
-      </div>
     </div>
 	</section>
 	<footer class="main-footer clearfix" role="contentinfo">
