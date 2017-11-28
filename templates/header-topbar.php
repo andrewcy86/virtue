@@ -28,7 +28,7 @@
 				<div class="view view-revision-hublinks view-id-revision_hublinks">
 					<span class="related-info"><strong>Related Topics:</strong></span>
 					<ul class="menu pipeline">
-						<li class="menu-item"><a href="/contact-us">Insert your Home Page Link here</a></li>
+						<li class="menu-item"><a href="https://devcentral.app.cloud.gov/">Developer Central</a></li>
 					</ul>
 				</div>
 			</div>
