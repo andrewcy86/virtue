@@ -117,7 +117,7 @@
 								<li><a class="menu-link social-flickr" href="https://www.flickr.com/photos/usepagov">Flickr</a></li>
 								<li><a class="menu-link social-instagram" href="https://www.instagram.com/epagov">Instagram</a></li>
 							</ul>
-							<p class="last-updated">Last updated on {Month day, YYYY}</p>
+							<p class="last-updated">Last updated on <?php the_modified_date(); ?></p>
 						</div>
 					</div>
 				</div>
