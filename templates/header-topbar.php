@@ -1,69 +1,46 @@
 <?php global $virtue; ?>
-  <div id="topbar" class="topclass">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6 col-sm-6 kad-topbar-left">
-          <div class="topbarmenu clearfix">
-          <?php if (has_nav_menu('topbar_navigation')) :
-              wp_nav_menu(array('theme_location' => 'topbar_navigation', 'menu_class' => 'sf-menu'));
-            endif;?>
-            <?php if(kadence_display_topbar_icons()) : ?>
-            <div class="topbar_social">
-              <ul>
-                <?php $top_icons = $virtue['topbar_icon_menu'];
-                foreach ($top_icons as $top_icon) {
-                  if(!empty($top_icon['target']) && $top_icon['target'] == 1) {
-                    $target = '_blank';
-                  } else {
-                    $target = '_self';
-                  }
-                  echo '<li><a href="'.esc_url($top_icon['link']).'" target="'.esc_attr($target).'" title="'.esc_attr($top_icon['title']).'" data-toggle="tooltip" data-placement="bottom" data-original-title="'.esc_attr($top_icon['title']).'">';
-                  if(!empty($top_icon['url'])) {
-                    echo '<img src="'.esc_url($top_icon['url']).'"/>' ;
-                  } else {
-                    echo '<i class="'.esc_attr($top_icon['icon_o']).'"></i>';
-                  }
-                  echo '</a></li>';
-                } ?>
-              </ul>
-            </div>
-          <?php endif;
-          if(isset($virtue['show_cartcount'])) {
-            if($virtue['show_cartcount'] == '1') { 
-              if (class_exists('woocommerce')) {
-                  global $woocommerce; ?>
-                  <ul class="kad-cart-total">
-                    <li>
-                      <a class="cart-contents" href="<?php echo esc_url(WC()->cart->get_cart_url()); ?>" title="<?php esc_attr_e('View your shopping cart', 'virtue'); ?>">
-                        <i class="icon-shopping-cart" style="padding-right:5px;"></i>
-                        <?php _e('Your Cart', 'virtue');?>
-                        <span class="kad-cart-dash">-</span>
-                        <?php if ( WC()->cart->tax_display_cart == 'incl' ) {
-                            echo WC()->cart->get_cart_subtotal(); 
-                          } else {
-                            echo WC()->cart->get_cart_total();
-                          }?>
-                      </a>
-                    </li>
-                  </ul>
-                <?php } 
-              } 
-            }?>
-          </div>
-        </div><!-- close col-md-6 --> 
-        <div class="col-md-6 col-sm-6 kad-topbar-right">
-          <div id="topbar-search" class="topbar-widget">
-            <?php if(kadence_display_topbar_widget()) {
-                    if(is_active_sidebar('topbarright')) {
-                      dynamic_sidebar('topbarright'); 
-                    } 
-                } else { 
-                  if(kadence_display_top_search()) {
-                    get_search_form();
-                  } 
-            } ?>
-        </div>
-        </div> <!-- close col-md-6-->
-      </div> <!-- Close Row -->
-    </div> <!-- Close Container -->
-  </div>
+  	<nav class="nav main-nav clearfix" role="navigation">
+		<div class="nav__inner">
+			<h2 class="element-invisible">Main menu</h2>
+			<ul class="menu" role="menu">
+				<li class="menu-item" role="presentation"><a class="menu-link" href="https://www.epa.gov/environmental-topics" role="menuitem" title="Learn about Environmental Topics that EPA covers.">Environmental Topics</a></li>
+				<li class="menu-item" role="presentation"><a class="menu-link" href="https://www.epa.gov/laws-regulations" role="menuitem" title="Laws written by Congress provide the authority for EPA to write regulations. Regulations explain the technical, operational, and legal details necessary to implement laws.">Laws &amp; Regulations</a></li>
+				<li class="menu-item" role="presentation"><a class="menu-link" href="https://www.epa.gov/aboutepa" role="menuitem" title="Learn more about our mission and what we do, how we are organized, and our history.">About EPA</a></li>
+			</ul>
+		</div>
+	</nav>
+	<div class="mobile-nav" id="mobile-nav">
+		<div class="mobile-bar clearfix">
+			<label class="menu-button" for="mobile-nav-toggle">Menu</label>
+		</div>
+    <input checked id="mobile-nav-toggle" type="checkbox">
+		<div class="mobile-links element-hidden" id="mobile-links" style="height:2404px;">
+			<ul class="mobile-menu">
+				<li class="menu-item" role="presentation"><a class="menu-link" href="https://www.epa.gov/environmental-topics" role="menuitem" title="Learn about Environmental Topics that EPA covers.">Environmental Topics</a></li>
+				<li class="menu-item" role="presentation"><a class="menu-link" href="https://www.epa.gov/laws-regulations" role="menuitem" title="Laws written by Congress provide the authority for EPA to write regulations. Regulations explain the technical, operational, and legal details necessary to implement laws.">Laws &amp; Regulations</a></li>
+				<li class="menu-item" role="presentation"><a class="menu-link" href="https://www.epa.gov/aboutepa" role="menuitem" title="Learn more about our mission and what we do, how we are organized, and our history.">About EPA</a></li>
+			</ul>
+		</div>
+	</div>
+	<section class="main-content clearfix" id="main-content" lang="en" role="main" tabindex="-1">
+		<div class="region-preface clearfix">
+			<div class="block-views-revision-hublinks-block" id="block-views-revision-hublinks-block">
+				<div class="view view-revision-hublinks view-id-revision_hublinks">
+					<span class="related-info"><strong>Related Topics:</strong></span>
+					<ul class="menu pipeline">
+						<li class="menu-item"><a href="/contact-us">Insert your Home Page Link here</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="block block-pane block-pane-epa-web-area-connect" id="block-pane-epa-web-area-connect">
+				<ul class="menu utility-menu">
+					<li class="menu-item"><a class="menu-link" href="{CONTACT URL}">Contact Us</a></li>
+				</ul>
+			</div>
+		</div>
+    <div class="main-column clearfix">
+      <!--googleon:all-->
+      <h1  class="page-title">Page Title</h1>
+      <div class="panel-pane pane-node-content">
+        <div class="pane-content">
+          <div class="node node-page clearfix view-mode-full">
