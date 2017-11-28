@@ -21,6 +21,19 @@
       $menulclass = 'col-md-8'; 
     }?>
 <div class="container">
+  <div class="row">
+      <div class="<?php echo esc_attr($logocclass); ?> clearfix kad-header-left">
+            <div id="logo" class="logocase">
+              <a class="brand logofont" href="<?php echo home_url(); ?>/">
+                <?php 
+                    echo get_bloginfo('name'); 
+               ?>
+              </a>
+              <?php if (isset($virtue['logo_below_text']) && !empty($virtue['logo_below_text'])) { ?>
+                <p class="kad_tagline belowlogo-text"><?php echo $virtue['logo_below_text']; ?></p>
+              <?php }?>
+           </div> <!-- Close #logo -->
+       </div><!-- close logo span -->
        <?php if (has_nav_menu('primary_navigation')) : ?>
          <div class="<?php echo esc_attr($menulclass); ?> kad-header-right">
            <nav id="nav-main" class="clearfix" itemscope itemtype="http://schema.org/SiteNavigationElement">
