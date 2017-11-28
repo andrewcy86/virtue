@@ -9,7 +9,7 @@ USE a plugin like : https://wordpress.org/plugins/header-and-footer-scripts/
 
 get_template_part('templates/head'); ?>
   	
-  	<body <?php body_class(); ?>>
+  	<body <?php body_class('wide-template'); ?>>
   	<?php 
 	do_action('virtue_after_body');
 	?>
