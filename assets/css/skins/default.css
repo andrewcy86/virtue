@@ -44,7 +44,7 @@ a:hover {text-decoration: none;}
 .hometitle {text-align: center;}
 
 /* Footer */
-#containerfooter h3, #containerfooter {color:#555;}
+#containerfooter h3, #containerfooter {color:#555; padding-bottom: 20px;}
 .footercredits p {color: #aaa;}
 .footerclass a {color: #555;}
 .footernav ul li a {color:#555;}
