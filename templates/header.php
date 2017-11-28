@@ -21,25 +21,6 @@
       $menulclass = 'col-md-8'; 
     }?>
 <div class="container">
-  <div class="row">
-      <div class="<?php echo esc_attr($logocclass); ?> clearfix kad-header-left">
-            <div id="logo" class="logocase">
-              <a class="brand logofont" href="<?php echo home_url(); ?>/">
-                <?php if (!empty($virtue['x1_virtue_logo_upload']['url'])) { ?>
-                  <div id="thelogo">
-                    <img src="<?php echo esc_url($virtue['x1_virtue_logo_upload']['url']); ?>" alt="<?php bloginfo('name');?>" class="kad-standard-logo" />
-                    <?php if(!empty($virtue['x2_virtue_logo_upload']['url'])) {?>
-                    <img src="<?php echo esc_url($virtue['x2_virtue_logo_upload']['url']);?>" alt="<?php bloginfo('name');?>" class="kad-retina-logo" style="max-height:<?php echo esc_attr($virtue['x1_virtue_logo_upload']['height']);?>px" /> <?php } ?>
-                  </div>
-                <?php } else { 
-                    echo apply_filters('kad_site_name', get_bloginfo('name')); 
-                  } ?>
-              </a>
-              <?php if (isset($virtue['logo_below_text']) && !empty($virtue['logo_below_text'])) { ?>
-                <p class="kad_tagline belowlogo-text"><?php echo $virtue['logo_below_text']; ?></p>
-              <?php }?>
-           </div> <!-- Close #logo -->
-       </div><!-- close logo span -->
        <?php if (has_nav_menu('primary_navigation')) : ?>
          <div class="<?php echo esc_attr($menulclass); ?> kad-header-right">
            <nav id="nav-main" class="clearfix" itemscope itemtype="http://schema.org/SiteNavigationElement">
