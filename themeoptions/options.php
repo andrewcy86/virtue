@@ -245,9 +245,7 @@ if ( ! class_exists( 'Redux' ) ) {
             'default'=> array(
                 'font-family'=>'Lato',
                 'color'=>"#444444", 
-                'font-style'=>'400',
-                'font-size'=>'14px', 
-                'line-height'=>'20px', ),
+                'font-style'=>'400',),
             ),
         array(
             'id'=>'logo_padding_top',
