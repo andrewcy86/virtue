@@ -35,6 +35,7 @@
         <div class="main <?php echo esc_attr( kadence_main_class() ); ?>" role="main">
         <?php while (have_posts()) : the_post(); ?>
             <article <?php post_class(); ?>>
+		    TEST
             <?php
              do_action( 'kadence_single_post_before' ); 
 
