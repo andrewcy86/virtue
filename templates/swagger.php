@@ -17,11 +17,10 @@ deviations to standard pages
  * $sidebar_position
  *
  */
-extract( benjamin_template_settings() );
 
 if( !$hide_content ):
 ?>
-<link rel="stylesheet" type="text/css" href="/wp-content/themes/benjamin/swagger/swagger-ui.css" >
+<link rel="stylesheet" type="text/css" href="/wp-content/themes/virtue/swagger/swagger-ui.css" >
 <style>
     html
     {
@@ -93,8 +92,8 @@ if( !$hide_content ):
 
 <div id="swagger-ui"></div>
 
-<script src="/wp-content/themes/benjamin/swagger/swagger-ui-bundle.js"> </script>
-<script src="/wp-content/themes/benjamin/swagger/swagger-ui-standalone-preset.js"> </script>
+<script src="/wp-content/themes/virtue/swagger/swagger-ui-bundle.js"> </script>
+<script src="/wp-content/themes/virtue/swagger/swagger-ui-standalone-preset.js"> </script>
 <script>
 window.onload = function() {
   
