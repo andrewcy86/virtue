@@ -7,8 +7,6 @@ deviations to standard pages
 
 */
 
-get_header();
-  
 /**
  * get all the settings needed for the the template layout
  *
@@ -121,5 +119,3 @@ window.onload = function() {
 
 <?php
 endif;
-
-get_footer();
