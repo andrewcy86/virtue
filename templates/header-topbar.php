@@ -24,7 +24,13 @@
 	</div>
 	<section class="main-content clearfix" id="main-content" lang="en" role="main" tabindex="-1">
 		<div class="region-preface clearfix">
-			<div class="block-views-revision-hublinks-block" id="block-views-revision-hublinks-block">
+<?php
+$url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
+
+
+if (strpos($url,'guide') !== false) {
+?>
+<div class="block-views-revision-hublinks-block" id="block-views-revision-hublinks-block">
 				<div class="view view-revision-hublinks view-id-revision_hublinks">
 					<span class="related-info"><strong>Related Topics:</strong></span>
 					<ul class="menu pipeline">
@@ -32,6 +38,10 @@
 					</ul>
 				</div>
 			</div>
+<?php
+}
+?>			
+			
 			<div class="block block-pane block-pane-epa-web-area-connect" id="block-pane-epa-web-area-connect">
 				<ul class="menu utility-menu">
 					<li class="menu-item"><a class="menu-link" href="/contact-us">Contact Us</a></li>
