@@ -36,3 +36,11 @@ require_once locate_template('/lib/custom-woocommerce.php'); 				// Woocommerce 
 require_once locate_template('/lib/woo-account.php'); 						// Woocommerce functions
 require_once locate_template('/lib/virtuetoolkit-activate.php'); 			// Plugin Activation
 require_once locate_template('/lib/custom-css.php'); 			    		// Fontend Custom CSS
+
+//using a filter hook, Add custom folder post type to User Specific Content Plugin
+add_filter('USC_allowed_post_types','usc_filter_post_types');
+function usc_filter_post_types($types){
+//to add a custom post type
+$types[] = 'folder';
+return $types;
+}
