@@ -6,7 +6,6 @@ require __DIR__ . '/lew/lew-process.php';
 $startDate = getPageVar('startDate');
 $endDate = getPageVar('endDate');
 $setAddress = getPageVar('setAddress');
-get_header('new');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -179,6 +178,3 @@ get_header('new');
 <script src="/lew-calculator/wp-content/themes/benjamin/page-templates/lew/lew-scripts.js"></script>
 </body>
 </html>
-<?php
-    get_footer('new');
-?>
