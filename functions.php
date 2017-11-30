@@ -37,10 +37,9 @@ require_once locate_template('/lib/woo-account.php'); 						// Woocommerce funct
 require_once locate_template('/lib/virtuetoolkit-activate.php'); 			// Plugin Activation
 require_once locate_template('/lib/custom-css.php'); 			    		// Fontend Custom CSS
 
-//using a filter hook, Add custom folder post type to User Specific Content Plugin
-add_filter('USC_allowed_post_types','usc_filter_post_types');
-function usc_filter_post_types($types){
-//to add a custom post type
-$types[] = 'folder';
-return $types;
+function remove_dashboard_meta() {
+        remove_meta_box( 'dashboard_quick_press', 'dashboard', 'side' );
+        remove_meta_box( 'dashboard_recent_drafts', 'dashboard', 'side' );
+        remove_meta_box( 'dashboard_recent_comments', 'dashboard', 'normal' );
 }
+add_action( 'admin_init', 'remove_dashboard_meta' );
