@@ -115,6 +115,6 @@ window.onload = function() {
   window.ui = ui
 }
 </script>
-
+<br /><br />
 <?php
 endif;
