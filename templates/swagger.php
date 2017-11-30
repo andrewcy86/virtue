@@ -117,5 +117,4 @@ window.onload = function() {
 </script>
 <br /><br />
 <?php
-dynamic_sidebar( kadence_sidebar_id() );
 endif;
