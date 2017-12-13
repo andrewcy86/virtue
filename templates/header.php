@@ -1,6 +1,16 @@
   <!-- Google Tag Manager -->
   <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-L8ZB" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager -->  
+
+  <!-- REMOVE WHEN IN PRODUCTION -->
+<style type="text/css">
+    #topbanner{position: fixed; z-index: 99999; width:100%; margin:0 auto;padding:0px 5px;text-align:center;background:linear-gradient(to bottom,#520001 0%,#6c0810 100%)}
+    #topbannerinner{margin:0 auto;width:100%}
+    #topbanner h3,#topbanner p{color:#FC0}
+    #topbanner a:link,#topbanner a:visited,#topbanner a:hover{color:#fff}
+ </style>
+<div id="topbanner"><p>EPA Sandbox Environment: The content on this page is not production data and this site is being used for <strong>testing</strong> purposes only.</p></div>
+
 	<header class="masthead clearfix" role="banner">
 		<img alt="" class="site-logo" src="https://www.epa.gov/sites/all/themes/epa/logo.png">
 		<div class="site-name-and-slogan">
