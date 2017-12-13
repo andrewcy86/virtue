@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Swagger API Documentaiton
+Template Name: Swagger API Documentation
 
 This is a copy of the standard "page" template, but exists to allow some
 deviations to standard pages
