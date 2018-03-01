@@ -43,3 +43,14 @@ function remove_dashboard_meta() {
         remove_meta_box( 'dashboard_recent_comments', 'dashboard', 'normal' );
 }
 add_action( 'admin_init', 'remove_dashboard_meta' );
+
+add_filter( 'dwqa_insert_comment_args’, 'dwqa_theme_moderate_comment’ );
+function dwqa_theme_moderate_comment( $args ) {
+$args['comment_approved’] = 0;
+ return $args;
+}
+ add_filter( 'dwqa_insert_answer_args’, 'dwqa_theme_moderate_answer' );
+function dwqa_theme_moderate_answer( $args ) {
+$args[post_status'] = 'pending';
+ return $args;
+}
