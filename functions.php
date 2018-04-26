@@ -37,16 +37,7 @@ require_once locate_template('/lib/woo-account.php'); 						// Woocommerce funct
 require_once locate_template('/lib/virtuetoolkit-activate.php'); 			// Plugin Activation
 require_once locate_template('/lib/custom-css.php'); 			    		// Fontend Custom CSS
 
-// REMOVE NAME, EMAIL, URL TO COMPLY WITH PTA
 
-function remove_email_url($fields) {
-    unset($fields['url']);
-    unset($fields['author']);
-    unset($fields['email']);
-    return $fields;
-}
-
-add_filter('comment_form_default_fields', 'remove_email_url');
 
 function remove_dashboard_meta() {
         remove_meta_box( 'dashboard_quick_press', 'dashboard', 'side' );
