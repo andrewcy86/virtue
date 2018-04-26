@@ -50,11 +50,11 @@
   <section id="respond">
   <?php $comment_args = array( 'fields' => apply_filters( 'comment_form_default_fields', array(
            'author' => '<div class="col-md-4">' . '<label for="author">' . __('Name', 'virtue') . ( $req ? ' <span class="comment-required">*</span>' : '' ) . '</label> ' .
-                        '<input id="author" name="author" type="text" value="' . esc_attr( $comment_author ) . '" ' . ( $req ? 'aria-required="true"' : '') . ' /></div>',
+                        '<input id="author" name="author" type="hidden" value="anonymous" ' . ( $req ? 'aria-required="true"' : '') . ' /></div>',
             'email'  => '<div class="col-md-4"><label for="email">' . __( 'Email (will not be published)', 'virtue') . ( $req ? ' <span class="comment-required">*</span>' : '' ) . '</label> ' .
-                        '<input type="email" class="text" name="email" id="email" value="' . esc_attr(  $comment_author_email ) . '" ' . ( $req ? 'aria-required="true"' : '') . ' /></div>',
+                        '<input type="hidden" class="text" name="email" id="email" value="anonymous@epa.gov" ' . ( $req ? 'aria-required="true"' : '') . ' /></div>',
             'url'    => '<div class="col-md-4"><label for="url">' . __( 'Website', 'virtue' ) . '</label> ' .
-                        '<input id="url" name="url" type="url" value="' . esc_attr( $comment_author_url ) . '" /></div>',
+                        '<input id="url" name="url" type="hidden" value="" /></div>',
                         ) 
             ),
               'comment_field'        => '<p class="comment-form-comment"><label for="comment">' . __( 'Comment', 'virtue' ) . '</label> <textarea id="comment" name="comment" cols="45" rows="8" class="input-xlarge" aria-required="true" required="required"></textarea></p>',
