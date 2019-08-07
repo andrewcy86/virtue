@@ -51,3 +51,11 @@ function dwqa_theme_moderate_answer( $args ) {
 $args['post_status'] = 'pending';
  return $args;
 }
+
+/**
+ * Add fix for cloudfront WYSIWYG Editor Issue
+ */
+function dtbaker_wp_cloudfront(){
+    add_filter('user_can_richedit','__return_true');
+}
+add_action( 'init', 'dtbaker_wp_cloudfront' , 9 );
